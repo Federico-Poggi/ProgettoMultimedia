@@ -1,10 +1,27 @@
 package Classes;
 
-import Interface.Luminosita;
+import Classes.Interface.Luminosita;
 
-public abstract class ElementoMultimediale {
+public abstract class ElementoMultimediale implements Luminosita {
     String title;
-    public ElementoMultimediale(String title){
-        this.title=title;
+    int brightness;
+
+    public ElementoMultimediale(String title, int brightness) {
+        this.title = title;
+        this.brightness = brightness;
     }
+
+    @Override
+    public void alzaLuminosita(int brightness) {
+        if (this.brightness!=brightness)
+            this.brightness=brightness;
+
+    }
+    @Override
+    public void abbasaLuminosita(int brightness) {
+        if (this.brightness!=brightness)
+            this.brightness=brightness;
+    }
+
+
 }
