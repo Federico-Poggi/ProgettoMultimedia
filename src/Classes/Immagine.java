@@ -3,9 +3,10 @@ package Classes;
 import Classes.Interface.Show;
 
 public class Immagine extends ElementoMultimediale implements Show {
+
     boolean show;
-    String Bright;
-    char ast='*';
+
+    String ast="*";
     public Immagine(String title, int brightness){
         super(title, brightness);
         this.brightness= brightness;
@@ -17,7 +18,7 @@ public class Immagine extends ElementoMultimediale implements Show {
 
     @Override
     public String toString() {
-        return "Immagine{" + this.title +" "+  +" "+this.show + "}";
+        return "Immagine{" + this.title +" "+ this.brightness + " " +this.show + "}";
     }
 
     @Override
@@ -33,9 +34,11 @@ public class Immagine extends ElementoMultimediale implements Show {
 
     @Override
     public void show() {
+        String bright=null;
         this.show=true;
         for (int i=0; i<this.brightness;i++){
 
+            bright.concat(ast);
         }
 
     }
