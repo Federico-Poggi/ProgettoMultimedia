@@ -1,7 +1,8 @@
 package Classes;
-import Classes.Interface.Luminosita;
 
-public class Immagine extends ElementoMultimediale implements Luminosita {
+import Classes.Interface.Show;
+
+public class Immagine extends ElementoMultimediale implements Show {
     boolean show;
 
     public Immagine(String title, int brightness){
@@ -11,18 +12,18 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
     }
 
     @Override
-    public void alzaLuminosita(int brightness) {
-        for (int i=0; i<=brightness; i++)
+    public void alzaLuminosita() {
             this.brightness++;
     }
 
     @Override
-    public void abbasaLuminosita(int brightness) {
-        for(int i=0; i>=brightness;i++)
+    public void abbasaLuminosita() {
             this.brightness--;
     }
 
-    public static boolean show(){
-        return true;
-    };
+
+    @Override
+    public void show() {
+        this.show=true;
+    }
 }

@@ -1,8 +1,9 @@
 package Classes;
 
-import Classes.Interface.Luminosita;
 
-public class Video extends ElementoMultimediale implements Luminosita{
+import Classes.Interface.Play;
+
+public class Video extends ElementoMultimediale implements Play {
     int volume=0;
     public Video(String title, int brightness, int volume) {
         super(title, brightness);
@@ -17,21 +18,20 @@ public class Video extends ElementoMultimediale implements Luminosita{
 
 
     @Override
-    public void alzaLuminosita(int brightness) {
-        if (this.brightness!=brightness)
-            this.brightness=brightness;
+    public void alzaLuminosita() {
+        this.brightness++;
     }
 
     @Override
-    public void abbasaLuminosita(int brightness) {
-        if (this.brightness!=brightness)
-            this.brightness=brightness;
+    public void abbasaLuminosita() {
+        this.brightness--;
     }
 
-    public void play(int durata){
-        for (int i=0; i<=durata; i++)
-          System.out.println("Title:" + "\n" + this.title+"\n"+"Volume:\n" + this.volume+"\n"+"Brightness:\n"+ this.brightness);
-    };
+
+    @Override
+    public void play() {
+
+    }
 
 
 }
