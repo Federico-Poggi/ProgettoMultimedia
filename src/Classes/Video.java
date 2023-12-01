@@ -27,7 +27,10 @@ public class Video extends ElementoMultimediale implements Play {
         this.brightness--;
     }
 
-
+    @Override
+    public String toString() {
+        return "Video{" + this.title +" "+this.brightness +" "+this.volume + "}";
+    }
     @Override
     public void play() {
 
